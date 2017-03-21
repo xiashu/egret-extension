@@ -1,0 +1,45 @@
+{
+	"name": "smalltree",
+	"description": "A Simple Extension For Egret Wing.",
+	"version": "1.2.0",
+	"publisher": "egret",
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.svg",
+	"bugs": {
+		"url": "https://github.com/egret-labs/wing-extensions/issues"
+	},
+	"homepage": "https://github.com/egret-labs/wing-extensions/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/egret-labs/wing-extensions.git"
+	},
+	"license": "MIT",
+	"activationEvents": [
+		"onCommand:extension.smalltree",
+		"*"
+	],
+	"engines": {
+		"wing": "^3.0.4"
+	},
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.smalltree",
+				"title": "Hello Wing"
+			}
+		]
+	},
+	"scripts": {
+		"wing:prepublish": "node ./node_modules/egretwing/bin/compile",
+		"compile": "node ./node_modules/egretwing/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/egretwing/bin/install"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"egretwing": "^3.0.4",
+		"typescript": "^1.7.5"
+	}
+}
