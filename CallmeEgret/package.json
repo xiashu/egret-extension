@@ -1,0 +1,119 @@
+{
+  "name": "missyou",
+  "displayName": "MissYou",
+  "description": "An Extension Tool For Egret Wing.",
+  "version": "0.0.5",
+  "publisher": "egret",
+  "engines": {
+    "wing": "^3.0.4"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*",
+    "onCommand:extension.showpos",
+    "onCommand:extension.showsize",
+    "onCommand:extension.showthis",
+    "onCommand:extension.showgif",
+    "onCommand:extension.showcomment",
+    "onCommand:extension.createfuns",
+    "onCommand:extension.copyline",
+    "onCommand:extension.showwing",
+    "onCommand:extension.delline" ,
+    "onCommand:extension.clickfun" 
+
+  ],
+  "main": "./out/src/extension",
+  "icon":"./out/128.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.showpos",
+        "title": "查看插件安装目录"
+      },
+       {
+        "command": "extension.showsize",
+        "title": "查看项目目录的所有文件情况"
+      },
+       {
+        "command": "extension.showthis",
+        "title": "快捷键添加this引用功能"
+      },
+       {
+        "command": "extension.showgif",
+        "title": "使用GifCam软件录制的GIF操作"
+      },
+      {
+        "command": "extension.showcomment",
+        "title": "添加注释"
+      },
+        {
+        "command": "extension.createfuns",
+        "title": "添加函数"
+      },
+       {
+        "command": "extension.copyline",
+        "title": "复制一行"
+      },
+      {
+        "command": "extension.clickfun",
+         "title":"生成点击函数"
+      }
+    ],
+    "keybindings": [
+			{
+				"command": "extension.showsize",
+				"key": "Ctrl+Shift+K"
+			},
+      {
+				"command": "extension.showthis",
+				"key": "Ctrl+1"
+			},
+       {
+				"command": "extension.showgif",
+				"key": "Ctrl+Shift+L"
+			},
+       {
+				"command": "extension.showcomment",
+				"key": "Ctrl+Alt+D"
+			}	,
+       {
+				"command": "extension.createfuns",
+				"key": "Ctrl+`"
+			},
+       {
+				"command": "extension.copyline",
+				"key": "Ctrl+Alt+M"
+			},
+       {
+				"command": "extension.delline",
+				"key": "Ctrl+D"
+			}    
+		],
+    "snippets": [
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			}
+		],
+   "menus": {
+    "editor/context": [
+        {
+            
+            "command": "extension.clickfun",
+            "group": "navigation"
+        }
+    ]}
+
+  },
+  "scripts": {
+    "wing:prepublish": "node ./node_modules/egretwing/bin/compile",
+    "compile": "node ./node_modules/egretwing/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/egretwing/bin/install"
+  },
+  "devDependencies": {
+    "egretwing": "^3.0.0",
+    "typescript": "^1.7.5"
+  }
+}

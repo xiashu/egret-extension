@@ -1,0 +1,7 @@
+An Extension Tool For Egret Wing.
+本插件收录一些开发过程有趣的插件，提供了一些有趣的实验。
+
+2.使用ctrl+1 补全this
+3.查看插件的安装位置
+4.Ctrl+Shift+K 查看项目的文件目录资源大小列表
+5.收录GifCam.exe作者 提供了一个录制操作gif动画的小工具，方便插件提交过程录制小动画
